@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Take a Poll</title>
+        <link rel="stylesheet" href="main.css">
+        <script src=Poll.js></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCCnyG7ZergtrhXZw66KNK_OIzRyFmfk_k",
+            authDomain: "pollkingnpss.firebaseapp.com",
+            databaseURL: "https://pollkingnpss.firebaseio.com",
+            projectId: "pollkingnpss",
+            storageBucket: "pollkingnpss.appspot.com",
+            messagingSenderId: "418230449983"
+          };
+          firebase.initializeApp(config);
+        </script>
+        
+    </head>
+
+    <body class="poll"> <!--whole page will be centered and 500px wide max-->
+        
+        <!-- Start Overlay -->
+        <div id="overlay"></div>
+        <!-- End Overlay -->
+        <!-- Start Special Centered Box -->
+        <div id="specialBox">
+          <p></p> 
+          <button onmousedown="toggleOverlay()">Close Overlay</button>
+        </div>
+        <!-- End Special Centered Box -->
+        
+        
+        <div class="question"> 
+            <h1>Sample Questions: What is your favourite flavour of ice cream?</h1>       
+        </div>
+        <div class="answer one">
+            <button id="aOne" onclick="pollCount(this)" onmousedown="toggleOverlay()">Chocolate</button>
+        </div>
+        <div class="answer two">
+            <button id="aTwo" onclick="pollCount(this)" onmousedown="toggleOverlay()">Vanilla</button>
+        </div>
+        <div class="answer three">
+            <button id="aThree" onclick="pollCount(this)" onmousedown="toggleOverlay()">Strawberry</button>
+        </div>
+        <div class="answer four">
+            <button id="aFour" onclick="pollCount(this)" onmousedown="toggleOverlay()">Blue Bunny Ice Cream's Famous Mint Chocolate Chip</button>
+        </div>
+
+    </body>
+    
+</html>
