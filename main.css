@@ -1,0 +1,142 @@
+html { /* The whole page should have the same font*/
+    background-color: black;
+    font-family: sans-serif;
+    max-height: 1200px;
+}
+
+.poll { /*Entire page is centered and 500px*/
+    margin: auto;
+    padding: 10px;
+    max-width: 550px
+}
+
+.question{/*Poll question colour/size/position/text set*/
+    background-color: #3c78d8;
+    text-align: center;
+    color: white;
+    border: 25px;
+    padding: inherit;
+    bottom: 85%;
+    width: 100%;
+    max-width: 550px;
+    overflow: auto;
+    margin: auto;
+}
+
+.answer button{/*sets margins and size of answer buttons*/
+    border: 25px;
+    /*text set*/
+    color: white;
+    text-align: center;
+    font-size:4vh;
+    overflow: auto;
+    /*whole button position and size*/
+    position: absolute;
+    height: 18%;
+    width: 95%;
+    max-width: 550px;
+    
+    margin: auto;
+    right: 0; left: 0;  
+}
+        /*Positions each button and indiv colours*/
+
+.one button{
+    background-color: #38761d;/*green*/ 
+    top: 20%;
+}
+
+.two button{
+    background-color: #cc0000;/*red*/
+    top: 40%;
+}
+
+.three button{
+    background-color: #741b47;/*purple*/
+    top:60%;
+}
+
+.four button{
+    background-color: #b45f06;/*orange*/
+    top:80%;
+}
+
+/*For the poll pages with images. These are arranged in a 2x2 grid instead.*/
+
+.answer_img button{ /*details consistent on all answer buttons*/
+    /*whole button sets*/
+    border: none;
+    position:absolute;
+    height: 36%;
+    max-width:250px;
+    width: 47%;
+    margin: auto;
+    /*text sets*/
+    color: white;
+    padding: 1% 2%;
+    text-align: center;
+    font-size: 25px;
+    
+    /*image sets*/
+    background-size:90% 75%;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+}
+
+.answer_text { /*positions text at the bottom of the button*/
+    position: absolute;
+    bottom: 5%;
+    left: 0%;
+}
+
+        /*Positions of each button and indiv colours*/
+
+.one_img button{
+    background-color: #38761d; /*green*/ 
+    top: 20%; /* +y */
+    right: 51%; /* -x*/
+    background-image:url(Chocolate%20Ice%20Cream.jpg);
+}
+
+.two_img button{
+    background-color: #cc0000; /*red*/
+    top: 20%; /* +y */
+    left: 51%;/* +x*/
+    background-image: url(4163-3-large.jpg);
+}
+
+.three_img button{
+    background-color: #741b47; /*purple*/
+    top:60%;/* -y */
+    right: 51%;/* -x*/
+    background-image: url(Strawberry.jpg);
+}
+
+.four_img button{
+    background-color: #b45f06; /*orange*/
+    top:60%;/* -y */
+    left:51%;/* +x*/
+    background-image: url(Mint%20Chocolate%20Chip.jpg);
+}
+
+/* overlay stuff. */
+div#overlay {
+	display: none;
+	z-index: 2;
+	background: #000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+}
+div#specialBox {
+	display: none;
+	position: relative;
+	z-index: 3;
+	margin: 150px auto 0px auto;
+	width: 500px; 
+	height: 300px;
+	background: #FFF;
+	color: #000;
